@@ -1,0 +1,120 @@
+.section {
+  padding: 100px 24px;
+  background: var(--bg-main);
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.title {
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 32px 24px;
+  transition: var(--transition-slow);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(0,239,139,0.1), transparent 70%);
+  opacity: 0;
+  transition: var(--transition-slow);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: var(--bg-card-hover);
+  border-color: rgba(0, 239, 139, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.iconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgba(0, 239, 139, 0.1);
+  color: var(--primary);
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.cardTitle {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--text-main);
+  position: relative;
+  z-index: 1;
+}
+
+.cardDesc {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.animateUp {
+  animation: fadeUp 0.8s ease forwards;
+}

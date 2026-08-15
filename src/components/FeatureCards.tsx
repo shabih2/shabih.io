@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Target, TrendingUp, BarChart, Gift, Map, Heart, Star } from 'lucide-react';
+import { Target, TrendingUp, BarChart, Gift, Map, Heart, Star, Banknote } from 'lucide-react';
 import { useTranslation, Trans } from 'react-i18next';
 import styles from './FeatureCards.module.css';
 
@@ -12,6 +12,7 @@ const FeatureCards: React.FC = () => {
     { title: t('features.lowerCac'), desc: t('features.lowerCacDesc'), icon: <Target size={32} /> },
     { title: t('features.higherClv'), desc: t('features.higherClvDesc'), icon: <TrendingUp size={32} /> },
     { title: t('features.unifiedData'), desc: t('features.unifiedDataDesc'), icon: <BarChart size={32} /> },
+    { title: t('features.payForResults'), desc: t('features.payForResultsDesc'), icon: <Banknote size={32} /> },
   ];
 
   const customerBenefits = [

@@ -41,31 +41,6 @@ export const Testimonials = () => {
           <p><Trans i18nKey="sections.statsBannerText" components={{ 1: <span className={styles.highlight} /> }} /></p>
         </div>
         
-        <h2 className={styles.title}>
-          <Trans i18nKey="sections.successStoriesTitle" components={{ 1: <span className={styles.highlight} /> }} />
-        </h2>
-        <div className={styles.testimonialGrid}>
-          <div className={styles.testimonialCard}>
-            <p className={styles.quote}>{t('sections.quote1')}</p>
-            <div className={styles.author}>
-              <div className={styles.avatar}>A</div>
-              <div>
-                <strong>{t('sections.quote1Author')}</strong>
-                <p>{t('sections.quote1Role')}</p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.testimonialCard}>
-            <p className={styles.quote}>{t('sections.quote2')}</p>
-            <div className={styles.author}>
-              <div className={styles.avatar}>S</div>
-              <div>
-                <strong>{t('sections.quote2Author')}</strong>
-                <p>{t('sections.quote2Role')}</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

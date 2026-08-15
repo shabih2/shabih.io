@@ -22,7 +22,6 @@ const Footer: React.FC = () => {
               <a href="#benefits">{t('navbar.benefits')}</a>
             </div>
             <div className={styles.linkGroup}>
-              <a href="#stories">{t('navbar.stories')}</a>
               <a href="#faq">{t('navbar.faq')}</a>
             </div>
           </div>

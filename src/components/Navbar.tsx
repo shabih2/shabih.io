@@ -19,10 +19,9 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: t('navbar.benefits'), hasDropdown: false },
-    { name: t('navbar.howItWorks'), hasDropdown: false },
-    { name: t('navbar.stories'), hasDropdown: false },
-    { name: t('navbar.faq'), hasDropdown: false },
+    { name: t('navbar.benefits'), hasDropdown: false, href: '#benefits' },
+    { name: t('navbar.howItWorks'), hasDropdown: false, href: '#how-it-works' },
+    { name: t('navbar.faq'), hasDropdown: false, href: '#faq' },
   ];
 
   const toggleLanguage = () => {

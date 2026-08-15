@@ -1,18 +1,21 @@
-
 import { UserPlus, ShoppingBag, Share2, Award } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 import styles from './Sections.module.css';
 
 export const HowItWorks = () => {
+  const { t } = useTranslation();
   const steps = [
-    { title: 'Register', desc: 'Create an account easily.', icon: <UserPlus /> },
-    { title: 'Purchase', desc: 'Buy and earn points.', icon: <ShoppingBag /> },
-    { title: 'Share', desc: 'Share your referral link.', icon: <Share2 /> },
-    { title: 'Reward', desc: 'Receive bonuses instantly.', icon: <Award /> },
+    { title: t('sections.step1Title'), desc: t('sections.step1Desc'), icon: <UserPlus /> },
+    { title: t('sections.step2Title'), desc: t('sections.step2Desc'), icon: <ShoppingBag /> },
+    { title: t('sections.step3Title'), desc: t('sections.step3Desc'), icon: <Share2 /> },
+    { title: t('sections.step4Title'), desc: t('sections.step4Desc'), icon: <Award /> },
   ];
   return (
     <section className={styles.section} id="how-it-works">
       <div className={styles.container}>
-        <h2 className={styles.title}>How It <span className={styles.highlight}>Works</span></h2>
+        <h2 className={styles.title}>
+          <Trans i18nKey="sections.howItWorksTitle" components={{ 1: <span className={styles.highlight} /> }} />
+        </h2>
         <div className={styles.stepsFlow}>
           {steps.map((step, idx) => (
             <div key={idx} className={styles.stepItem}>
@@ -29,33 +32,36 @@ export const HowItWorks = () => {
 };
 
 export const Testimonials = () => {
+  const { t } = useTranslation();
   return (
     <section className={styles.section} id="stories">
       <div className={styles.container}>
         <div className={styles.statsBanner}>
-          <h3>Did you know?</h3>
-          <p>Businesses adopting a combined program see an average <span className={styles.highlight}>30% growth in CLV</span>. (Source: Industry Data)</p>
+          <h3>{t('sections.didYouKnow')}</h3>
+          <p><Trans i18nKey="sections.statsBannerText" components={{ 1: <span className={styles.highlight} /> }} /></p>
         </div>
         
-        <h2 className={styles.title}>Success <span className={styles.highlight}>Stories</span></h2>
+        <h2 className={styles.title}>
+          <Trans i18nKey="sections.successStoriesTitle" components={{ 1: <span className={styles.highlight} /> }} />
+        </h2>
         <div className={styles.testimonialGrid}>
           <div className={styles.testimonialCard}>
-            <p className={styles.quote}>"Our sales increased by 25% in just 3 months!"</p>
+            <p className={styles.quote}>{t('sections.quote1')}</p>
             <div className={styles.author}>
               <div className={styles.avatar}>A</div>
               <div>
-                <strong>Ahmed</strong>
-                <p>Al-Burgers Restaurant</p>
+                <strong>{t('sections.quote1Author')}</strong>
+                <p>{t('sections.quote1Role')}</p>
               </div>
             </div>
           </div>
           <div className={styles.testimonialCard}>
-            <p className={styles.quote}>"Customer retention is at an all-time high."</p>
+            <p className={styles.quote}>{t('sections.quote2')}</p>
             <div className={styles.author}>
               <div className={styles.avatar}>S</div>
               <div>
-                <strong>Sara</strong>
-                <p>Boutique Shop</p>
+                <strong>{t('sections.quote2Author')}</strong>
+                <p>{t('sections.quote2Role')}</p>
               </div>
             </div>
           </div>
@@ -66,16 +72,19 @@ export const Testimonials = () => {
 };
 
 export const FAQ = () => {
+  const { t } = useTranslation();
   const faqs = [
-    { q: 'Do I need a separate app?', a: 'No, everything is inside {{AppName}}.' },
-    { q: 'How do I redeem referral points?', a: 'Automatically upon your next purchase.' },
-    { q: 'Is it hard to integrate for merchants?', a: 'Setup takes just a few minutes.' },
+    { q: t('sections.faq1Q'), a: t('sections.faq1A') },
+    { q: t('sections.faq2Q'), a: t('sections.faq2A') },
+    { q: t('sections.faq3Q'), a: t('sections.faq3A') },
   ];
 
   return (
     <section className={styles.section} id="faq">
       <div className={styles.container}>
-        <h2 className={styles.title}>Frequently Asked <span className={styles.highlight}>Questions</span></h2>
+        <h2 className={styles.title}>
+          <Trans i18nKey="sections.faqTitle" components={{ 1: <span className={styles.highlight} /> }} />
+        </h2>
         <div className={styles.faqList}>
           {faqs.map((faq, idx) => (
             <details key={idx} className={styles.faqItem}>

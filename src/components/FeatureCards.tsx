@@ -1,22 +1,24 @@
 import { useEffect, useRef, useState } from 'react';
 import { Target, TrendingUp, BarChart, Gift, Map, Heart } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 import styles from './FeatureCards.module.css';
 
-const merchantBenefits = [
-  { title: 'Lower CAC', desc: 'Reduce customer acquisition cost significantly.', icon: <Target size={32} /> },
-  { title: 'Higher CLV', desc: 'Increase customer lifetime value through loyalty.', icon: <TrendingUp size={32} /> },
-  { title: 'Unified Data', desc: 'Unified data on purchase and referral behavior.', icon: <BarChart size={32} /> },
-];
-
-const customerBenefits = [
-  { title: 'Multi-Source Rewards', desc: 'Earn points for purchases and referral discounts.', icon: <Gift size={32} /> },
-  { title: 'Clear Path', desc: 'Clear path to accumulate rewards effortlessly.', icon: <Map size={32} /> },
-  { title: 'Pride of Sharing', desc: 'Proud sharing experience strengthening brand connection.', icon: <Heart size={32} /> },
-];
-
 const FeatureCards: React.FC = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+
+  const merchantBenefits = [
+    { title: t('features.lowerCac'), desc: t('features.lowerCacDesc'), icon: <Target size={32} /> },
+    { title: t('features.higherClv'), desc: t('features.higherClvDesc'), icon: <TrendingUp size={32} /> },
+    { title: t('features.unifiedData'), desc: t('features.unifiedDataDesc'), icon: <BarChart size={32} /> },
+  ];
+
+  const customerBenefits = [
+    { title: t('features.multiSource'), desc: t('features.multiSourceDesc'), icon: <Gift size={32} /> },
+    { title: t('features.clearPath'), desc: t('features.clearPathDesc'), icon: <Map size={32} /> },
+    { title: t('features.prideSharing'), desc: t('features.prideSharingDesc'), icon: <Heart size={32} /> },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,7 +39,9 @@ const FeatureCards: React.FC = () => {
     <section ref={sectionRef} className={styles.section} id="benefits">
       <div className={styles.container}>
         <div className={`${styles.header} ${isVisible ? styles.animateUp : ''}`}>
-          <h2 className={styles.title}>Benefits for <span className={styles.highlight}>Merchants</span></h2>
+          <h2 className={styles.title}>
+            <Trans i18nKey="features.benefitsMerchants" components={{ 1: <span className={styles.highlight} /> }} />
+          </h2>
         </div>
         <div className={styles.grid}>
           {merchantBenefits.map((feature, idx) => (
@@ -50,7 +54,9 @@ const FeatureCards: React.FC = () => {
         </div>
 
         <div className={`${styles.header} ${isVisible ? styles.animateUp : ''}`} style={{ marginTop: '80px' }}>
-          <h2 className={styles.title}>Benefits for <span className={styles.highlight}>Customers</span></h2>
+          <h2 className={styles.title}>
+            <Trans i18nKey="features.benefitsCustomers" components={{ 1: <span className={styles.highlight} /> }} />
+          </h2>
         </div>
         <div className={styles.grid}>
           {customerBenefits.map((feature, idx) => (

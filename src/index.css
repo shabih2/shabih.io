@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;900&display=swap');
 
 :root {
-  /* Color Palette */
-  --bg-main: #060a08;
-  --bg-card: rgba(20, 30, 25, 0.6);
-  --bg-card-hover: rgba(30, 45, 38, 0.8);
+  /* Color Palette - Light Theme */
+  --bg-main: #f8fafc;
+  --bg-card: rgba(255, 255, 255, 0.7);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
   
-  --primary: #00EF8B;
-  --primary-glow: rgba(0, 239, 139, 0.4);
-  --primary-hover: #00d57a;
+  --primary: #00d57a;
+  --primary-glow: rgba(0, 213, 122, 0.25);
+  --primary-hover: #00b065;
   
-  --text-main: #F4F7F5;
-  --text-muted: #8E9C95;
+  --text-main: #0f172a;
+  --text-muted: #475569;
   
-  --border-color: rgba(0, 239, 139, 0.15);
+  --border-color: rgba(0, 213, 122, 0.2);
   
   /* Gradients */
-  --grad-hero: linear-gradient(135deg, rgba(0, 239, 139, 0.15) 0%, rgba(6, 10, 8, 0) 50%);
-  --grad-card: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+  --grad-hero: linear-gradient(135deg, rgba(0, 213, 122, 0.1) 0%, rgba(248, 250, 252, 0) 50%);
+  --grad-card: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0) 100%);
   
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;

@@ -1,46 +1,36 @@
-
+import { useTranslation } from 'react-i18next';
 import styles from './Footer.module.css';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.topSection}>
           <div className={styles.brand}>
-            <a href="#" className={styles.logo} aria-label="{{AppName}} Home">
+            <a href="#" className={styles.logo} aria-label={`${t('navbar.appName')} Home`}>
               <div className={styles.logoMark}>
                 <div className={styles.logoCircle}></div>
               </div>
-              <span className={styles.logoText}>{'{{AppName}}'}</span>
+              <span className={styles.logoText}>{t('navbar.appName')}</span>
             </a>
-            <p className={styles.tagline}>The ultimate combined referral and loyalty platform to supercharge your business.</p>
+            <p className={styles.tagline}>{t('hero.tagline')}</p>
           </div>
           
           <div className={styles.linksGrid}>
             <div className={styles.linkGroup}>
-              <h4>Platform</h4>
-              <a href="#how-it-works">How it works</a>
-              <a href="#benefits">Benefits</a>
+              <a href="#how-it-works">{t('navbar.howItWorks')}</a>
+              <a href="#benefits">{t('navbar.benefits')}</a>
             </div>
             <div className={styles.linkGroup}>
-              <h4>Resources</h4>
-              <a href="#stories">Success Stories</a>
-              <a href="#faq">FAQ</a>
-            </div>
-            <div className={styles.linkGroup}>
-              <h4>Company</h4>
-              <a href="#">Contact Us</a>
-              <a href="#">About</a>
+              <a href="#stories">{t('navbar.stories')}</a>
+              <a href="#faq">{t('navbar.faq')}</a>
             </div>
           </div>
         </div>
         
         <div className={styles.bottomSection}>
-          <p>&copy; {new Date().getFullYear()} {'{{AppName}}'}. All rights reserved.</p>
-          <div className={styles.legalLinks}>
-            <a href="#">Terms of Service</a>
-            <a href="#">Privacy Policy</a>
-          </div>
+          <p>{t('footer.rights')}</p>
         </div>
       </div>
     </footer>

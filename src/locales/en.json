@@ -1,0 +1,68 @@
+{
+  "navbar": {
+    "appName": "shabih",
+    "benefits": "Benefits",
+    "howItWorks": "How it Works",
+    "stories": "Stories",
+    "faq": "FAQ",
+    "primaryCta": "Get Started"
+  },
+  "hero": {
+    "tagline": "Boost sales & retain customers with a single referral-loyalty app.",
+    "subtitle": "Empower your customers to earn while they refer, creating a self-sustaining growth loop.",
+    "combinedPower": "Combined Power",
+    "referralLoyalty": "Referral + Loyalty",
+    "cardFooterText1": "Customers earn points on purchases and bonuses for referring friends.",
+    "averageClv": "Average CLV Growth",
+    "cardFooterText2": "Data: Businesses using combined programs",
+    "howItWorks": "How it works",
+    "shareLink": "Share Link",
+    "earnRewards": "Earn Rewards"
+  },
+  "features": {
+    "benefitsMerchants": "Benefits for <1>Merchants</1>",
+    "lowerCac": "Lower CAC",
+    "lowerCacDesc": "Reduce customer acquisition cost significantly.",
+    "higherClv": "Higher CLV",
+    "higherClvDesc": "Increase customer lifetime value through loyalty.",
+    "unifiedData": "Unified Data",
+    "unifiedDataDesc": "Unified data on purchase and referral behavior.",
+    "benefitsCustomers": "Benefits for <1>Customers</1>",
+    "multiSource": "Multi-Source Rewards",
+    "multiSourceDesc": "Earn points for purchases and referral discounts.",
+    "clearPath": "Clear Path",
+    "clearPathDesc": "Clear path to accumulate rewards effortlessly.",
+    "prideSharing": "Pride of Sharing",
+    "prideSharingDesc": "Proud sharing experience strengthening brand connection."
+  },
+  "sections": {
+    "howItWorksTitle": "How It <1>Works</1>",
+    "step1Title": "Register",
+    "step1Desc": "Create an account easily.",
+    "step2Title": "Purchase",
+    "step2Desc": "Buy and earn points.",
+    "step3Title": "Share",
+    "step3Desc": "Share your referral link.",
+    "step4Title": "Reward",
+    "step4Desc": "Receive bonuses instantly.",
+    "didYouKnow": "Did you know?",
+    "statsBannerText": "Businesses adopting a combined program see an average <1>30% growth in CLV</1>. (Source: Industry Data)",
+    "successStoriesTitle": "Success <1>Stories</1>",
+    "quote1": "\"Our sales increased by 25% in just 3 months!\"",
+    "quote1Author": "Ahmed",
+    "quote1Role": "Al-Burgers Restaurant",
+    "quote2": "\"Customer retention is at an all-time high.\"",
+    "quote2Author": "Sara",
+    "quote2Role": "Boutique Shop",
+    "faqTitle": "Frequently Asked <1>Questions</1>",
+    "faq1Q": "Do I need a separate app?",
+    "faq1A": "No, everything is inside shabih.",
+    "faq2Q": "How do I redeem referral points?",
+    "faq2A": "Automatically upon your next purchase.",
+    "faq3Q": "Is it hard to integrate for merchants?",
+    "faq3A": "Setup takes just a few minutes."
+  },
+  "footer": {
+    "rights": "© 2026 shabih. All rights reserved."
+  }
+}

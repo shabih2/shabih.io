@@ -105,13 +105,13 @@
 }
 
 .btnSecondary {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.05);
   color: var(--text-main);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
 }
 
 .btnSecondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.08);
   transform: translateY(-2px);
 }
 
@@ -218,7 +218,7 @@
 }
 
 .ruleItem {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.05);
   padding: 10px;
   border-radius: 8px;
   font-size: 14px;

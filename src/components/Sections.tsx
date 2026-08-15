@@ -1,4 +1,4 @@
-import { Camera, Send, Award } from 'lucide-react';
+import { Camera, Send, Award, Compass } from 'lucide-react';
 import { useTranslation, Trans } from 'react-i18next';
 import styles from './Sections.module.css';
 
@@ -8,6 +8,7 @@ export const HowItWorks = () => {
     { title: t('sections.step1Title'), desc: t('sections.step1Desc'), icon: <Camera /> },
     { title: t('sections.step2Title'), desc: t('sections.step2Desc'), icon: <Send /> },
     { title: t('sections.step3Title'), desc: t('sections.step3Desc'), icon: <Award /> },
+    { title: t('sections.step4Title'), desc: t('sections.step4Desc'), icon: <Compass /> },
   ];
   return (
     <section className={styles.section} id="how-it-works">

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, Gift, Users, TrendingUp } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import styles from './HeroSection.module.css';
 
 const HeroSection: React.FC = () => {
@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
             {t('hero.tagline')}
           </h1>
           <p className={`${styles.subtitle} ${mounted ? styles.animateUpDelay1 : ''}`}>
-            {t('hero.subtitle')}
+            <Trans i18nKey="hero.subtitle" components={{ 1: <strong /> }} />
           </p>
           
           <div className={`${styles.btnGroup} ${mounted ? styles.animateUpDelay2 : ''}`}>

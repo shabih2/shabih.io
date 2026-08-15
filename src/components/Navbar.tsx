@@ -3,6 +3,8 @@ import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from './Navbar.module.css';
 
+import Logo from './Logo';
+
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
@@ -35,9 +37,7 @@ const Navbar: React.FC = () => {
       <div className={styles.container}>
         {/* Logo */}
         <a href="#" className={styles.logo} aria-label={`${t('navbar.appName')} Home`}>
-          <div className={styles.logoMark}>
-            <div className={styles.logoCircle}></div>
-          </div>
+          <Logo className={styles.logoMark} />
           <span className={styles.logoText}>{t('navbar.appName')}</span>
         </a>
 

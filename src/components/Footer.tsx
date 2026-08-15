@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import styles from './Footer.module.css';
+import Logo from './Logo';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -9,9 +10,7 @@ const Footer: React.FC = () => {
         <div className={styles.topSection}>
           <div className={styles.brand}>
             <a href="#" className={styles.logo} aria-label={`${t('navbar.appName')} Home`}>
-              <div className={styles.logoMark}>
-                <div className={styles.logoCircle}></div>
-              </div>
+              <Logo className={styles.logoMark} />
               <span className={styles.logoText}>{t('navbar.appName')}</span>
             </a>
             <p className={styles.tagline}>{t('hero.tagline')}</p>

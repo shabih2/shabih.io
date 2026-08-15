@@ -33,7 +33,9 @@
     "clearPath": "Gifts for your Followers",
     "clearPathDesc": "Give your followers exclusive offers they can only get through you.",
     "prideSharing": "New Experiences",
-    "prideSharingDesc": "Discover and benefit from a diverse network of businesses and stores."
+    "prideSharingDesc": "Discover and benefit from a diverse network of businesses and stores.",
+    "beAmbassador": "Be an Ambassador",
+    "beAmbassadorDesc": "Get discounts on products and services from participating merchants."
   },
   "sections": {
     "howItWorksTitle": "How It <1>Works</1>",

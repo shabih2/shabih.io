@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Target, TrendingUp, BarChart, Gift, Map, Heart } from 'lucide-react';
+import { Target, TrendingUp, BarChart, Gift, Map, Heart, Star } from 'lucide-react';
 import { useTranslation, Trans } from 'react-i18next';
 import styles from './FeatureCards.module.css';
 
@@ -18,6 +18,7 @@ const FeatureCards: React.FC = () => {
     { title: t('features.multiSource'), desc: t('features.multiSourceDesc'), icon: <Gift size={32} /> },
     { title: t('features.clearPath'), desc: t('features.clearPathDesc'), icon: <Map size={32} /> },
     { title: t('features.prideSharing'), desc: t('features.prideSharingDesc'), icon: <Heart size={32} /> },
+    { title: t('features.beAmbassador'), desc: t('features.beAmbassadorDesc'), icon: <Star size={32} /> },
   ];
 
   useEffect(() => {

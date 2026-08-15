@@ -52,6 +52,11 @@ export const FAQ = () => {
     { q: t('sections.faq1Q'), a: t('sections.faq1A') },
     { q: t('sections.faq2Q'), a: t('sections.faq2A') },
     { q: t('sections.faq3Q'), a: t('sections.faq3A') },
+    { q: t('sections.faq4Q'), a: t('sections.faq4A') },
+    { q: t('sections.faq5Q'), a: t('sections.faq5A') },
+    { q: t('sections.faq6Q'), a: t('sections.faq6A') },
+    { q: t('sections.faq7Q'), a: t('sections.faq7A') },
+    { q: t('sections.faq8Q'), a: t('sections.faq8A') },
   ];
 
   return (

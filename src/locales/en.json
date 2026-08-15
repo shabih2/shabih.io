@@ -56,11 +56,21 @@
     "quote2Role": "Boutique Shop",
     "faqTitle": "Frequently Asked <1>Questions</1>",
     "faq1Q": "Do I need a separate app?",
-    "faq1A": "No, everything is inside shabih.",
-    "faq2Q": "How do I redeem referral points?",
-    "faq2A": "Automatically upon your next purchase.",
-    "faq3Q": "Is it hard to integrate for merchants?",
-    "faq3A": "Setup takes just a few minutes."
+    "faq1A": "No, everything is integrated into shabih, and you don't need to download a separate app.",
+    "faq2Q": "How does the customer receive the referral reward?",
+    "faq2A": "Upon a successful referral meeting the conditions, the customer receives points or the reward specified by the merchant.",
+    "faq3Q": "How does the merchant benefit from referrals?",
+    "faq3A": "The merchant reaches new customers through their existing customers and shabih ambassadors, helping them increase visits and sales.",
+    "faq4Q": "Does the merchant need to change their POS system?",
+    "faq4A": "No, shabih is designed to easily integrate with merchant systems without needing to replace the entire POS system.",
+    "faq5Q": "How are referrals verified?",
+    "faq5A": "shabih verifies the referral execution based on a mechanism that guarantees actual referrals and limits manipulation.",
+    "faq6Q": "How can I reach shabih ambassadors?",
+    "faq6A": "Merchants can showcase their experiences within shabih to ambassadors, allowing them to discover, share with their audience, and bring new customers.",
+    "faq7Q": "Can I specify the reward I offer?",
+    "faq7A": "Yes, merchants can set appropriate rewards and incentives that align with their goals.",
+    "faq8Q": "When does the customer or ambassador receive the reward?",
+    "faq8A": "After the referral is verified and conditions are met, the reward is added to the beneficiary's balance according to the program rules."
   },
   "footer": {
     "rights": "© 2026 shabih. All rights reserved."

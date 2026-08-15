@@ -105,7 +105,9 @@
 
 @media (min-width: 900px) {
   .desktopActions {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 16px;
   }
 }
 
@@ -171,19 +173,18 @@
 .langBtn {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 10px 16px;
-  border-radius: 100px;
-  background: rgba(0, 0, 0, 0.03);
-  color: var(--text-main);
-  font-weight: 500;
-  font-size: 15px;
-  border: 1px solid var(--border-color);
+  justify-content: center;
+  padding: 8px;
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  border-radius: 50%;
   transition: var(--transition-fast);
 }
 
 .langBtn:hover {
-  background: rgba(0, 0, 0, 0.08);
+  color: var(--text-main);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .mobileLangBtn {

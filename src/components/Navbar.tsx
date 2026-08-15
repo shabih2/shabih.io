@@ -55,9 +55,8 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Actions */}
         <div className={styles.desktopActions}>
-           <button onClick={toggleLanguage} className={styles.langBtn} aria-label="Toggle Language">
-             <Globe size={20} />
-             <span>{i18n.language === 'en' ? 'العربية' : 'EN'}</span>
+           <button onClick={toggleLanguage} className={styles.langBtn} aria-label="Toggle Language" title={i18n.language === 'en' ? 'العربية' : 'English'}>
+             <Globe size={22} />
            </button>
            <button className={styles.primaryBtn}>{t('navbar.primaryCta')}</button>
         </div>

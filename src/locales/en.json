@@ -78,5 +78,14 @@
   },
   "footer": {
     "rights": "© 2026 shabih. All rights reserved."
+  },
+  "registerBusiness": {
+    "title": "Register your Business",
+    "businessName": "Business Name",
+    "uan": "UAN or Freelance Certificate",
+    "next": "Next",
+    "contactNumber": "Contact Number",
+    "verifyWhatsApp": "Verify via WhatsApp",
+    "whatsappMessage": "Welcome {{businessName}}, here is your token: {{token}}"
   }
 }

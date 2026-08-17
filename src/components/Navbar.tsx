@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
 import Logo from './Logo';
 
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -57,7 +59,9 @@ const Navbar: React.FC = () => {
            <button onClick={toggleLanguage} className={styles.langBtn} aria-label="Toggle Language" title={i18n.language === 'en' ? 'العربية' : 'English'}>
              <Globe size={22} />
            </button>
-           <button className={styles.primaryBtn}>{t('navbar.primaryCta')}</button>
+           <button className={styles.primaryBtn} onClick={() => navigate('/register-business')}>
+             {t('navbar.primaryCta')}
+           </button>
         </div>
 
         {/* Mobile Toggle */}
@@ -81,7 +85,12 @@ const Navbar: React.FC = () => {
           <button onClick={toggleLanguage} className={styles.mobileLangBtn}>
             <Globe size={20} /> {i18n.language === 'en' ? 'العربية' : 'English'}
           </button>
-          <button className={styles.mobilePrimaryBtn}>{t('navbar.primaryCta')}</button>
+          <button className={styles.mobilePrimaryBtn} onClick={() => {
+            navigate('/register-business');
+            setMobileMenuOpen(false);
+          }}>
+            {t('navbar.primaryCta')}
+          </button>
         </div>
       )}
     </nav>

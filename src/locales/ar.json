@@ -78,5 +78,14 @@
   },
   "footer": {
     "rights": "© 2026 shabih. جميع الحقوق محفوظة."
+  },
+  "registerBusiness": {
+    "title": "تسجيل المنشأة",
+    "businessName": "اسم المنشأة",
+    "uan": "الرقم الموحد أو رقم وثيقة العمل الحر",
+    "next": "التالي",
+    "contactNumber": "رقم التواصل",
+    "verifyWhatsApp": "التحقق عن طريق الواتساب",
+    "whatsappMessage": "مرحبا {{businessName}}، رمز التوكين الخاص بك: {{token}}"
   }
 }

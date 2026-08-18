@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, Gift, Users, TrendingUp } from 'lucide-react';
 import { useTranslation, Trans } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './HeroSection.module.css';
 
 const HeroSection: React.FC = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -28,9 +27,9 @@ const HeroSection: React.FC = () => {
           </p>
           
           <div className={`${styles.btnGroup} ${mounted ? styles.animateUpDelay2 : ''}`}>
-            <button onClick={() => navigate('/register-business')} className={styles.btnPrimary}>
+            <Link to="/register-business" className={styles.btnPrimary}>
               {t('navbar.primaryCta')} <ArrowRight size={18} />
-            </button>
+            </Link>
           </div>
         </div>
 

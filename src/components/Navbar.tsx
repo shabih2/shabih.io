@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
 import Logo from './Logo';
@@ -10,6 +10,8 @@ const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +26,28 @@ const Navbar: React.FC = () => {
     { name: t('navbar.howItWorks'), hasDropdown: false, href: '#how-it-works' },
     { name: t('navbar.faq'), hasDropdown: false, href: '#faq' },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    const targetId = href.replace('#', '');
+    
+    if (location.pathname !== '/') {
+      navigate('/' + href);
+      setTimeout(() => {
+        const elem = document.getElementById(targetId);
+        if (elem) {
+          elem.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const elem = document.getElementById(targetId);
+      if (elem) {
+        elem.scrollIntoView({ behavior: 'smooth' });
+        window.history.pushState(null, '', href);
+      }
+    }
+  };
 
   const toggleLanguage = () => {
     const newLang = i18n.language === 'en' ? 'ar' : 'en';
@@ -45,7 +69,7 @@ const Navbar: React.FC = () => {
         <div className={styles.desktopMenu}>
           {navLinks.map((link, idx) => (
             <div key={idx} className={styles.navItem}>
-              <a href={link.href} className={styles.navLink}>
+              <a href={link.href} onClick={(e) => handleNavClick(e, link.href)} className={styles.navLink}>
                 {link.name}
                 {link.hasDropdown && <ChevronDown className={styles.chevron} size={16} />}
               </a>
@@ -77,7 +101,7 @@ const Navbar: React.FC = () => {
       {mobileMenuOpen && (
         <div className={styles.mobileMenu}>
           {navLinks.map((link, idx) => (
-            <a key={idx} href={link.href} className={styles.mobileNavItem} onClick={() => setMobileMenuOpen(false)}>
+            <a key={idx} href={link.href} className={styles.mobileNavItem} onClick={(e) => handleNavClick(e, link.href)}>
               {link.name}
             </a>
           ))}

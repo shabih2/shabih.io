@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 import styles from './RegisterBusiness.module.css';
+import Logo from './Logo';
 
 const RegisterBusiness: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -49,7 +50,11 @@ const RegisterBusiness: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
+        <div className={styles.logoWrap}>
+          <Logo className={styles.logoIcon} />
+        </div>
         <h1 className={styles.title}>{t('registerBusiness.title')}</h1>
+        <p className={styles.titleSub}>{t('registerBusiness.subtitle', { defaultValue: 'أدخل بيانات منشأتك للبدء' })}</p>
         
         {step === 1 ? (
           <form onSubmit={handleNext}>

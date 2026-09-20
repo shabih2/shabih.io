@@ -19,6 +19,10 @@ const HeroSection: React.FC = () => {
 
       <div className={styles.container}>
         <div className={styles.content}>
+          <div className={`${styles.badge} ${mounted ? styles.animateUp : ''}`}>
+            <span className={styles.badgeDot}></span>
+            {t('hero.badge', { defaultValue: 'منصة الولاء والإحالة الأولى في السعودية' })}
+          </div>
           <h1 className={`${styles.headline} ${mounted ? styles.animateUp : ''}`}>
             {t('hero.tagline')}
           </h1>

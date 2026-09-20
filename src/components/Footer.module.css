@@ -1,7 +1,8 @@
+/* ── Footer ── */
 .footer {
-  background: var(--bg-main);
+  background: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
-  padding: 80px 24px 40px;
+  padding: 72px 28px 36px;
 }
 
 .container {
@@ -13,94 +14,92 @@
   display: flex;
   flex-direction: column;
   gap: 48px;
-  margin-bottom: 64px;
+  margin-bottom: 56px;
 }
 
 @media (min-width: 900px) {
   .topSection {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 
-.brand {
-  max-width: 320px;
-}
+/* Brand */
+.brand { max-width: 300px; }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 10px;
+  margin-bottom: 18px;
+  text-decoration: none;
 }
 
 .logoMark {
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logoCircle {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--primary);
-  box-shadow: 0 0 10px var(--primary-glow);
+  width: 30px;
+  height: 30px;
+  color: var(--primary);
+  flex-shrink: 0;
 }
 
 .logoText {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 20px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
   color: var(--text-main);
 }
 
 .tagline {
+  font-size: 14.5px;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
+/* Links */
 .linksGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 32px 48px;
 }
 
 @media (min-width: 600px) {
-  .linksGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  .linksGrid { grid-template-columns: repeat(3, 1fr); }
 }
 
 .linkGroup h4 {
-  font-size: 16px;
+  font-size: 13px;
+  font-weight: 700;
   color: var(--text-main);
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
 }
 
 .linkGroup a {
   display: block;
   color: var(--text-muted);
-  margin-bottom: 16px;
-  font-size: 15px;
-  transition: var(--transition-fast);
+  margin-bottom: 12px;
+  font-size: 14.5px;
+  transition: color var(--transition-fast),
+              transform var(--transition-fast);
 }
 
 .linkGroup a:hover {
-  color: var(--primary);
+  color: var(--text-main);
+  transform: translateX(2px);
 }
 
+/* Bottom */
 .bottomSection {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  padding-top: 32px;
-  color: var(--text-muted);
-  font-size: 14px;
+  gap: 18px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 28px;
+  color: var(--text-subtle);
+  font-size: 13.5px;
 }
 
 @media (min-width: 768px) {
@@ -113,9 +112,13 @@
 
 .legalLinks {
   display: flex;
-  gap: 24px;
+  gap: 20px;
+}
+
+.legalLinks a {
+  transition: color var(--transition-fast);
 }
 
 .legalLinks a:hover {
-  color: var(--text-main);
+  color: var(--text-secondary);
 }
